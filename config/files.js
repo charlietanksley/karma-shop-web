@@ -11,13 +11,13 @@ module.exports = function(lineman) {
 
     // As an example, to override the file patterns for
     // the order in which to load third party JS libs:
-    //
-    // js: {
-    //   vendor: [
-    //     "vendor/js/underscore.js",
-    //     "vendor/js/**/*.js"
-    //   ]
-    // }
+
+    js: {
+      vendor: [
+        "bower_components/exoskeleton/exoskeleton.js",
+        "bower_components/react/react.js"
+      ]
+    }
 
   };
 };
