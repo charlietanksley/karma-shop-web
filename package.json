@@ -1,0 +1,17 @@
+{
+  "name": "karma-shop",
+  "title": "That Karma Shop",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "Charlie Tanksley",
+    "company": "Big Nerd Ranch"
+  },
+  "devDependencies": {
+    "lineman": "~0.24.3"
+  },
+  "scripts": {
+    "start": "lineman run",
+    "test": "lineman spec-ci"
+  }
+}
