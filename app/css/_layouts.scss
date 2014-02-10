@@ -1,0 +1,16 @@
+.header {
+  @extend .column;
+  @extend .ten;
+  @extend .center;
+}
+
+.main {
+  @extend .column;
+  @extend .eight;
+}
+
+.sidebar {
+  @extend .column;
+  @extend .four;
+  @extend .last;
+}

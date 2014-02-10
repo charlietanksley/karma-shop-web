@@ -1,13 +1,11 @@
-$blue: blue;
+// scale: http://modularscale.com/scale/?px1=20&px2=205&ra1=1.618&ra2=0
+// 20; 205
+@import "layers";
+@import "variables";
+@import "typography";
+@import "layouts";
+@import "modules/treasures";
 
 body {
-  background: $blue;
-}
-
-$darkGray: #dedede;
-$lightGray: #efefef;
-
-.hello {
-  background-color: $lightGray;
-  border: 1px solid $darkGray;
+  padding: 0 1% 1% 1%;
 }

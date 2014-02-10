@@ -1,0 +1,12 @@
+.treasure {
+  @extend .column;
+  @extend .three;
+}
+
+.treasure-image {
+  width: 100%;
+}
+
+.attribution {
+  font-size: 0.571em;
+}

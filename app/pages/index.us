@@ -4,6 +4,8 @@
     <title><%= pkg.title %></title>
 
     <link rel="stylesheet" type="text/css" href="<%= css %>" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header class="header">
