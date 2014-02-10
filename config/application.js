@@ -14,17 +14,7 @@
 module.exports = function(lineman) {
   //Override application configuration here. Common examples follow in the comments.
   return {
-    jshint: {
-      options: {
-        "asi": true
-      , "laxcomma": true
-      , "newcap": false
-      }
-    }
 
-  , removeTasks: {
-      common: ["coffee", "less", "handlebars"]
-    }
     // API Proxying
     //
     // During development, you'll likely want to make XHR (AJAX) requests to an API on the same
@@ -40,15 +30,32 @@ module.exports = function(lineman) {
     //   }
     // }
 
+
+    browserify: {
+      options: {
+        transform:  [ require('grunt-react').browserify ]
+      }
+    }
+
+  , jshint: {
+    options: {
+      "asi": true
+    , "laxcomma": true
+    , "newcap": false
+    }
+  }
+
   , enableSass: true
+
   , enableAssetFingerprint: true
 
-  , browserify: {
-    options: {
-      transform: [
-        "reactify"
-      ]
-    }
+  , removeTasks: {
+    common: ["coffee", "less", "handlebars"]
+  }
+
+  , watch: {
+    files: [ "app/**/*.js" ],
+    tasks: [ 'browserify' ]
   }
   }
 }
