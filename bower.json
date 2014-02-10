@@ -1,9 +1,0 @@
-{
-  "name": "karma-shop",
-  "version": "0.0.1",
-  "private": true,
-  "dependencies": {
-    "exoskeleton": "~0.6.3",
-    "react": "~0.8.0"
-  }
-}
