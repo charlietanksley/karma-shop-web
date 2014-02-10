@@ -8,16 +8,12 @@
 module.exports = function(lineman) {
   //Override file patterns here
   return {
-
-    // As an example, to override the file patterns for
-    // the order in which to load third party JS libs:
-
     js: {
-      vendor: [
-        "bower_components/exoskeleton/exoskeleton.js",
-        "bower_components/react/react.js"
-      ]
+      entrypoint: "app/js/entrypoint.js"
     }
 
-  };
-};
+  , coffee: {
+    entrypoint: "app/js/entrypoint.coffee"
+  }
+  }
+}

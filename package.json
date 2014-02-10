@@ -7,8 +7,16 @@
     "name": "Charlie Tanksley",
     "company": "Big Nerd Ranch"
   },
+  "dependencies": {
+    "exoskeleton": "~0.6.3",
+    "react": "~0.8.0"
+  },
   "devDependencies": {
-    "lineman": "~0.24.3"
+    "lineman": "~0.24.3",
+    "grunt": "~0.4.2",
+    "grunt-react": "~0.6.0",
+    "lineman-browserify": "0.0.2",
+    "reactify": "~0.7.0"
   },
   "scripts": {
     "start": "lineman run",

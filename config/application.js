@@ -42,5 +42,13 @@ module.exports = function(lineman) {
 
   , enableSass: true
   , enableAssetFingerprint: true
+
+  , browserify: {
+    options: {
+      transform: [
+        "reactify"
+      ]
+    }
+  }
   }
 }
