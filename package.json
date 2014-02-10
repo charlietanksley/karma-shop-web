@@ -14,6 +14,7 @@
   "devDependencies": {
     "lineman": "~0.24.3",
     "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "0.8.0",
     "grunt-react": "~0.6.0",
     "lineman-browserify": "0.0.2",
     "reactify": "~0.7.0"
