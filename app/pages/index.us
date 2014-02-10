@@ -105,6 +105,6 @@
       </ul>
     </div>
 
-    <script type="text/javascript" src="<%= js %>"></script>
+    <script type="text/javascript" src="js/browserifyBundle.js"></script>
   </body>
 </html>
