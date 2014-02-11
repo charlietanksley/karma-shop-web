@@ -11,9 +11,5 @@ module.exports = function(lineman) {
     js: {
       entrypoint: "app/js/entrypoint.js"
     }
-
-  , coffee: {
-    entrypoint: "app/js/entrypoint.coffee"
-  }
   }
 }
