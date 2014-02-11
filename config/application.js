@@ -53,8 +53,10 @@ module.exports = function(lineman) {
   }
 
   , watch: {
-    files: [ "app/**/*.js" ],
-    tasks: [ 'browserify' ]
+    js: {
+      files: [ "app/**/*.js", "app/views/*.jsx" ],
+      tasks: [ 'common' ]
+    }
   }
   }
 }
