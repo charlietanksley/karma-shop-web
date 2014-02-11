@@ -30,7 +30,6 @@ module.exports = function(lineman) {
     //   }
     // }
 
-
     browserify: {
       options: {
         transform:  [ require('grunt-react').browserify ]
