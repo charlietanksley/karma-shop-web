@@ -8,7 +8,7 @@ module.exports = React.createClass({
         })
 
         return(
-            <ul class="plain">
+            <ul className="plain">
             { listNodes }
             </ul>
         )
