@@ -1,2 +1,3 @@
-React = require('react')
-Backbone = require('exoskeleton')
+var PotentialCustomerListing = require('./potential-customer-listing')
+
+new PotentialCustomerListing().render()
