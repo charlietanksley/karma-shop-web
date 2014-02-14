@@ -1,0 +1,9 @@
+{
+  "name": "karma-shop-web",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "jbone": "~1.0.5",
+    "reqwest": "~1.0.2"
+  }
+}

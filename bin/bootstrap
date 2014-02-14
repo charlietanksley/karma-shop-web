@@ -1,0 +1,7 @@
+#!/bin/sh
+
+gem install sass # for scss
+npm install -g lineman
+npm install -g bower
+npm install
+bower install
