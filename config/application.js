@@ -49,7 +49,7 @@ module.exports = function(lineman) {
   , enableAssetFingerprint: true
 
   , removeTasks: {
-    common: ["coffee", "less", "handlebars"]
+    common: ["less", "handlebars", "coffee", "jst"]
   }
 
   , watch: {
