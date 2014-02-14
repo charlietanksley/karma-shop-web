@@ -93,17 +93,7 @@
       </section>
     </section>
 
-    <div class="sidebar">
-      <ul>
-        <li>charlie tanksley</li>
-        <li>some really long thing with such a long name you say 'wow' that is so long</li>
-        <li>CBQ</li>
-        <li>charlie_tanksley</li>
-        <li>jeremy</li>
-        <li>something good</li>
-        <li>hahahahahah</li>
-      </ul>
-    </div>
+    <div class="sidebar"></div>
 
     <script type="text/javascript" src="js/browserifyBundle.js"></script>
   </body>

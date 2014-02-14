@@ -14,8 +14,15 @@
 
 module.exports = {
   drawRoutes: function(app) {
-    // app.get('/api/greeting/:message', function(req, res){
-    //   res.json({ message: "OK, "+req.params.message });
-    // });
+    app.get('/api/potential_customers.json', function(req, res){
+      res.json({'potentialCustomers': [
+        'charlie tanksley',
+        'some really long thing with such a long name you say "wow" that is so long',
+        'CBQ',
+        'charlie_tanksley',
+        'jeremy',
+        'something good',
+        'hahahahahah']})
+    })
   }
-};
+}
