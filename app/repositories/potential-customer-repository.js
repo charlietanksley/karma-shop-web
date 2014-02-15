@@ -1,8 +1,8 @@
-$ = require('../js/dollar')
+var reqwest = require('reqwest')
 
 module.exports = {
   all: function() {
-    return $.ajax({
+    return reqwest({
       url: '/api/potential_customers.json'
     })
   }
