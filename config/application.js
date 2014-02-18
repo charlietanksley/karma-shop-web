@@ -49,7 +49,9 @@ module.exports = function(lineman) {
   , enableAssetFingerprint: true
 
   , removeTasks: {
-    common: ["less", "handlebars", "coffee", "jst"]
+    common: ["less", "handlebars", "coffee", "jst", "concat_sourcemap"]
+  , dist: ["uglify"]
+  }
   }
 
   , watch: {
