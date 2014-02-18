@@ -14,22 +14,6 @@
 module.exports = function(lineman) {
   //Override application configuration here. Common examples follow in the comments.
   return {
-
-    // API Proxying
-    //
-    // During development, you'll likely want to make XHR (AJAX) requests to an API on the same
-    // port as your lineman development server. By enabling the API proxy and setting the port, all
-    // requests for paths that don't match a static asset in ./generated will be forwarded to
-    // whatever service might be running on the specified port.
-    //
-    // server: {
-    //   apiProxy: {
-    //     enabled: true,
-    //     host: 'localhost',
-    //     port: 3000
-    //   }
-    // }
-
     browserify: {
       options: {
         transform:  [ require('grunt-react').browserify, 'debowerify' ]
@@ -52,6 +36,15 @@ module.exports = function(lineman) {
     common: ["less", "handlebars", "coffee", "jst", "concat_sourcemap"]
   , dist: ["uglify"]
   }
+
+  , server: {
+    // apiProxy: {
+    //   enabled: true
+    // , host: 'localhost'
+    // , prefix: 'api'
+    // , port: 3000
+    // }
+    pushState: true
   }
 
   , watch: {
