@@ -1,3 +1,7 @@
-var PotentialCustomerListing = require('./potential-customer-listing')
+(function(){
+  window.Backbone = require('exoskeleton')
+  var Router = require('./router')
 
-new PotentialCustomerListing().render()
+  new Router()
+  Backbone.history.start({pushState: true})
+})()
