@@ -3,23 +3,20 @@ var Backbone = require('exoskeleton')
 module.exports = Backbone.View.extend({
   el: '.sidebar'
 
+, initialize: function() {
+    this.collection.on("sync", this.render.bind(this))
+  }
 , template: '<div class="potential-customer-listing"></div>'
 
-, displayView: function(response) {
+, render: function() {
     var PotentialCustomerView = require('../views/potential-customer-view.jsx')
       , React = require('react')
-      , data = { potentialCustomers: response.potentialCustomers }
+      , data = { potentialCustomers: this.collection }
+
     this.el.innerHTML = this.template
     var component = document.getElementsByClassName('potential-customer-listing')[0]
 
     React.renderComponent(new PotentialCustomerView(data), component)
-  }
-
-, render: function() {
-    var PotentialCustomerRepository = require('../repositories/potential-customer-repository')
-      , context = this
-
-    PotentialCustomerRepository.all()
-    .then(this.displayView.bind(context))
+    return this
   }
 })
