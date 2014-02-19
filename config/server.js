@@ -24,5 +24,65 @@ module.exports = {
         'something good',
         'hahahahahah']})
     })
+
+    app.get('/api/customer_treasures.json', function(req, res) {
+      res.json({treasures: {
+        customer: {
+          id: 1
+        , name: req.query.customerName
+        }
+      , treasures: [
+        {
+          name: 'retro computer monitor',
+          src: '/img/computer-monitor.jpg',
+          attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+          attributionText: 'Marcin Wichary'
+        }
+      , {
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      , {
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      , {
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      , {
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      , {
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      , {
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      , {
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      ]
+      }
+               })
+    })
   }
 }
