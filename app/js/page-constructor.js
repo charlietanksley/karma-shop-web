@@ -7,4 +7,13 @@ module.exports = {
     potentialCustomers.fetch()
     new PotentialCustomerListing({collection: potentialCustomers})
   }
+
+  , treasuresFor: function(term) {
+      var Treasures = require('./models/treasures')
+        , treasures = new Treasures({customerName: term})
+        , TreasureView = require('./views/treasure-view')
+
+      treasures.fetch()
+      new TreasureView({collection: treasures})
+    }
 }
