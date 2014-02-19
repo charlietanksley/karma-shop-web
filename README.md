@@ -33,13 +33,7 @@ This will start the app on `localhost:8000`.
 
 ## Caveats
 
-Stuff is broken!  In particular, you need to add
-
-```json
-  "main": "dist/jbone.js"
-````
-
-to both `bower_components/jbone/bower.json` and `bower_components/jbone/.bower.json`.
+Stuff is broken!  In particular, you need to:
 
 And you need to comment out lines 18 and 19 of `node_modules/exoskeleton/exoskeleton.js`.
 
