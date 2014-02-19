@@ -1,6 +1,6 @@
 module.exports = {
   sidebar: function() {
-    var PotentialCustomerListing = require('./potential-customer-listing')
+    var PotentialCustomerListing = require('./views/potential-customer-listing-view')
       , PotentialCustomers = require('./models/potential-customers')
       , potentialCustomers = new PotentialCustomers()
 
