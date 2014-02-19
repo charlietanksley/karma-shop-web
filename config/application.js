@@ -49,7 +49,7 @@ module.exports = function(lineman) {
 
   , watch: {
     js: {
-      files: [ "app/**/*.js", "app/views/*.jsx" ],
+      files: [ "app/**/*.js", "app/templates/*.jsx" ],
       tasks: [ 'common' ]
     }
   }

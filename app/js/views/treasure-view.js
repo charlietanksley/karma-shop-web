@@ -15,7 +15,7 @@ module.exports = Backbone.View.extend({
 , template: '<div class="treasure-listing"></div>'
 
 , render: function() {
-    var TreasureView = require('../../views/treasure-view.jsx')
+    var TreasureView = require('../../templates/treasures.jsx')
       , React = require('react')
       , data = { customer: this.customer,
                  treasures: this.collection }
