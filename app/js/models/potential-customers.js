@@ -3,7 +3,7 @@ var PotentialCustomer = require('./potential-customer')
 
 module.exports = Backbone.Collection.extend({
   model: PotentialCustomer
-, url: 'api/potential_customers.json'
+, url: '/api/potential_customers.json'
 
 , parse: function(response) {
     var convertToPotentialCustomers = function(entry) {

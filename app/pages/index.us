@@ -22,74 +22,7 @@
         </p>
       </section>
 
-      <section class="treasures">
-        <h2 class="treasure-owner">charlie tanksley</h2>
-        <ul class="plain">
-          <li class="treasure"><img class="tresure-picture" src="img/computer-monitor.jpg" alt="retro computer monitor" />
-            <small class="attribution">
-              <a href="http://www.flickr.com/photos/mwichary/4376985108/sizes/l/">
-                Marcin Wichary
-            </a>
-            </small>
-          </li>
-
-          <li class="treasure"><img class="treasure-image" src="img/computer-monitor.jpg" alt="retro computer monitor" />
-            <small class="attribution">
-              <a href="http://www.flickr.com/photos/mwichary/4376985108/sizes/l/">
-                Marcin Wichary
-            </a>
-            </small>
-          </li>
-
-          <li class="treasure"><img class="treasure-image" src="img/computer-monitor.jpg" alt="retro computer monitor">
-            <small class="attribution">
-              <a href="http://www.flickr.com/photos/mwichary/4376985108/sizes/l/">
-                Marcin Wichary
-            </a>
-            </small>
-          </li>
-
-          <li class="treasure last"><img class="treasure-image" src="img/computer-monitor.jpg" alt="retro computer monitor">
-            <small class="attribution">
-              <a href="http://www.flickr.com/photos/mwichary/4376985108/sizes/l/">
-                Marcin Wichary
-            </a>
-            </small>
-          </li>
-
-          <li class="treasure"><img class="treasure-image" src="img/computer-monitor.jpg" alt="retro computer monitor" />
-            <small class="attribution">
-              <a href="http://www.flickr.com/photos/mwichary/4376985108/sizes/l/">
-                Marcin Wichary
-            </a>
-            </small>
-          </li>
-
-          <li class="treasure"><img class="treasure-image" src="img/computer-monitor.jpg" alt="retro computer monitor" />
-            <small class="attribution">
-              <a href="http://www.flickr.com/photos/mwichary/4376985108/sizes/l/">
-                Marcin Wichary
-            </a>
-            </small>
-          </li>
-
-          <li class="treasure"><img class="treasure-image" src="img/computer-monitor.jpg" alt="retro computer monitor">
-            <small class="attribution">
-              <a href="http://www.flickr.com/photos/mwichary/4376985108/sizes/l/">
-                Marcin Wichary
-            </a>
-            </small>
-          </li>
-
-          <li class="treasure last"><img class="treasure-image" src="img/computer-monitor.jpg" alt="retro computer monitor">
-            <small class="attribution">
-              <a href="http://www.flickr.com/photos/mwichary/4376985108/sizes/l/">
-                Marcin Wichary
-            </a>
-            </small>
-          </li>
-
-
+      <section class="content">
       </section>
     </section>
 

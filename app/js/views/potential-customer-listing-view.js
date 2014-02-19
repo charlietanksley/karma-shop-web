@@ -9,7 +9,7 @@ module.exports = Backbone.View.extend({
 , template: '<div class="potential-customer-listing"></div>'
 
 , render: function() {
-    var PotentialCustomerView = require('../views/potential-customer-view.jsx')
+    var PotentialCustomerView = require('../../templates/potential-customers.jsx')
       , React = require('react')
       , data = { potentialCustomers: this.collection }
 
