@@ -8,6 +8,15 @@ module.exports = {
     new PotentialCustomerListing({collection: potentialCustomers})
   }
 
+  , shop: function(term) {
+      var Products = require('./models/products')
+        , ProductsView = require('./views/products-view')
+        , products = new Products({customerName: term})
+
+      products.fetch()
+      new ProductsView({collection: products})
+    }
+
   , treasuresFor: function(term) {
       var Treasures = require('./models/treasures')
         , treasures = new Treasures({customerName: term})
