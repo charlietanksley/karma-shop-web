@@ -4,11 +4,17 @@ var Backbone = require('exoskeleton')
 module.exports = Backbone.Router.extend({
   routes: {
     '': 'index'
+  , 'treasures/:identifier/shop': 'shop'
   , 'treasures/*identifier': 'treasures'
   }
 
 , index: function(){
     pageConstructor.sidebar()
+  }
+
+, shop: function(identifier) {
+    pageConstructor.sidebar()
+    pageConstructor.shop(identifier)
   }
 
 , treasures: function(identifier) {
