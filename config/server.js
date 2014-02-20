@@ -89,6 +89,7 @@ module.exports = {
       res.json({store: {
         customer: {
           id: 1
+        , availableKarma: 100
         , name: req.query.customerName
         }
       , products: [
