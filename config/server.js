@@ -85,7 +85,7 @@ module.exports = {
                })
     })
 
-    app.get('/api/products.json', function(req, res){
+    app.get('/api/store.json', function(req, res){
       res.json({store: {
         customer: {
           id: 1
