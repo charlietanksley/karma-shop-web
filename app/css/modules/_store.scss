@@ -1,7 +1,22 @@
+.buy-now {
+  background: $action;
+  color: $action-button-font-color;
+  padding: 1em;
+}
+
+.karma-available {
+  font-size: 1.496em;
+  text-align: right;
+}
+
 .product {
   @extend .column;
   @extend .twelve;
   margin-bottom: 1em;
+}
+
+.product-details {
+  @extend .last;
 }
 
 .product-picture {
@@ -18,14 +33,4 @@
 .product-visual {
   @extend .column;
   @extend .six;
-}
-
-.product-details {
-  @extend .last;
-}
-
-.buy-now {
-  background: $action;
-  color: $action-button-font-color;
-  padding: 1em;
 }
