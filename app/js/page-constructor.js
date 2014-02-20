@@ -1,5 +1,11 @@
 module.exports = {
-  sidebar: function() {
+  introText: function(text) {
+    var IntroText = require('./views/intro-text-view')
+
+    new IntroText().render({text: text})
+  }
+
+, sidebar: function() {
     var PotentialCustomerListing = require('./views/potential-customer-listing-view')
       , PotentialCustomers = require('./models/potential-customers')
       , potentialCustomers = new PotentialCustomers()
