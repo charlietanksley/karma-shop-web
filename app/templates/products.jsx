@@ -26,8 +26,11 @@ module.exports = React.createClass({
 
         return(
             <section className="store">
-              <h2 className="store-welcome">Welcome to the store for { this.props.customer.get('name') }</h2>
-              <p className="karma-available">Karma available: { this.props.customer.get('availableKarma') }</p>
+              <h2 className="store-welcome">Get busy shopping</h2>
+
+              <p className="karma-available">
+                { this.props.customer.get('name') } has <span className="karma-number">{ this.props.customer.get('availableKarma') }</span> karma available
+              </p>
               <ul className="plain">
                 { listNodes }
               </ul>
