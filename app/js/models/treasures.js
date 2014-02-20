@@ -6,6 +6,7 @@ module.exports = Backbone.Collection.extend({
   initialize: function(options) {
     this.customerName = options.customerName
   }
+
 , model: Treasure
 , url: '/api/customer_treasures.json'
 
