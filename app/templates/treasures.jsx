@@ -10,9 +10,9 @@ module.exports = React.createClass({
         var listNodes = this.props.treasures.map(function (treasure, index) {
             return (
                 <li className={ classForListItem(index) }>
-                  <img className="treasure-picture" src={ treasure.get('src') } />
+                  <img className="treasure-picture" src={ treasure.get('src') } alt={ treasure.get('name') } />
                   <small className="attribution">
-                    <a href={ treasure.get('attributionUrl') } alt={ treasure.get('name') }>
+                    <a href={ treasure.get('attributionUrl') }>
                       { treasure.get('attributionText') }
                     </a>
                   </small>
