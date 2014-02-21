@@ -4,7 +4,7 @@ var Product = require('./product')
 
 module.exports = Backbone.Collection.extend({
   model: Product
-, url: '/api/store.json'
+, url: '/api/stores.json'
 
 , initialize: function(options) {
     this.customerName = options.customerName
