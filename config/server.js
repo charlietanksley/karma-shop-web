@@ -84,5 +84,98 @@ module.exports = {
       }
                })
     })
+
+    app.get('/api/store.json', function(req, res){
+      res.json({store: {
+        customer: {
+          id: 1
+        , availableKarma: 100
+        , name: req.query.customerName
+        }
+      , products: [
+        {
+          id: 1,
+          price: 10,
+          unitsOwned: 0,
+          name: 'retro computer monitor',
+          src: '/img/computer-monitor.jpg',
+          attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+          attributionText: 'Marcin Wichary'
+        }
+      , {
+        id: 2,
+        price: 2,
+        unitsOwned: 10,
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      , {
+        id: 3,
+        price: 5,
+        unitsOwned: 0,
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      , {
+        id: 4,
+        price: 20,
+        unitsOwned: 0,
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      , {
+        id: 5,
+        price: 3,
+        unitsOwned: 0,
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      , {
+        id: 6,
+        price: 3,
+        unitsOwned: 0,
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      , {
+        id: 7,
+        price: 200,
+        unitsOwned: 0,
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      , {
+        id: 9,
+        price: 2,
+        unitsOwned: 1,
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      , {
+        id: 10,
+        price: 10,
+        unitsOwned: 3,
+        name: 'retro computer monitor',
+        src: '/img/computer-monitor.jpg',
+        attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+        attributionText: 'Marcin Wichary'
+      }
+      ]
+      }})
+    })
   }
 }

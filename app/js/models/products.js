@@ -1,14 +1,14 @@
-var Treasure = require('./treasure')
-  , fn = require('../fn')
+var Product = require('./product')
   , Customer = require('./customer')
+  , fn = require('../fn')
 
 module.exports = Backbone.Collection.extend({
-  initialize: function(options) {
+  model: Product
+, url: '/api/stores.json'
+
+, initialize: function(options) {
     this.customerName = options.customerName
   }
-
-, model: Treasure
-, url: '/api/customer_treasures.json'
 
 , fetch: function(options) {
     options = options === undefined ? {} : options
@@ -19,10 +19,10 @@ module.exports = Backbone.Collection.extend({
   }
 
 , parse: function(response) {
-    var customer = response.treasures.customer,
-        treasures = response.treasures.treasures
+    var customer = response.store.customer,
+        products = response.store.products
 
     this.customer = new Customer(customer)
-    return treasures
+    return products
   }
 })
