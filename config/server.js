@@ -25,6 +25,27 @@ module.exports = {
         'hahahahahah']})
     })
 
+    app.post('/api/purchases.json', function(req, res) {
+      res.json({store: {
+        customer: {
+          id: 1
+        , availableKarma: 100
+        , name: req.body.customerName
+        }
+      , products: [
+        {
+          id: req.body.productId,
+          price: 10,
+          unitsOwned: 0,
+          name: 'retro computer monitor',
+          src: '/img/computer-monitor.jpg',
+          attributionUrl: 'http://www.flickr.com/photos/mwichary/4376985108/sizes/l/',
+          attributionText: 'Marcin Wichary'
+        }
+      ]
+      }})
+    })
+
     app.get('/api/customer_treasures.json', function(req, res) {
       res.json({treasures: {
         customer: {
