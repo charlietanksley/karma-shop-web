@@ -21,9 +21,10 @@ module.exports = function(lineman) {
         }
       }
 
-    , options: {
-      debug: true
-    , transform:  [ require('grunt-react').browserify, 'debowerify' ]
+      , options: {
+        debug: true
+      , exclude: ['underscore', 'jquery']
+      , transform:  [ require('grunt-react').browserify, 'debowerify' ]
       }
     }
 
