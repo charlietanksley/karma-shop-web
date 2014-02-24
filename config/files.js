@@ -7,9 +7,6 @@
  */
 module.exports = function(lineman) {
   //Override file patterns here
-  return {
-    js: {
-      entrypoint: "app/js/entrypoint.js"
-    }
-  }
+  // return {
+  // }
 }

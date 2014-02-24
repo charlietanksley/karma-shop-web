@@ -31,7 +31,7 @@ module.exports = function(customer) {
     var popupAlert = function() {
       alert('You cannot afford this item')
     }
-    var notify = callback == undefined ? popupAlert : callback
+    var notify = callback === undefined ? popupAlert : callback
 
     if (this.karmaDecremented() >= 0) {
       return true

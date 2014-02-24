@@ -15,10 +15,22 @@ module.exports = function(lineman) {
   //Override application configuration here. Common examples follow in the comments.
   return {
     browserify: {
-      options: {
-        transform:  [ require('grunt-react').browserify, 'debowerify' ]
+      app_js: {
+        files: {
+          "generated/js/app.js" : "app/js/app.js"
+        }
+      }
+
+      , options: {
+        debug: true
+      , exclude: ['underscore', 'jquery']
+      , transform:  [ require('grunt-react').browserify, 'debowerify' ]
       }
     }
+
+  , enableSass: true
+
+  , enableAssetFingerprint: true
 
   , jshint: {
     options: {
@@ -28,13 +40,14 @@ module.exports = function(lineman) {
     }
   }
 
-  , enableSass: true
+  , loadNpmTasks: ['grunt-browserify']
 
-  , enableAssetFingerprint: true
+  , prependTasks: {
+    common: ['browserify']
+  }
 
   , removeTasks: {
     common: ["less", "handlebars", "coffee", "jst", "concat_sourcemap"]
-  , dist: ["uglify"]
   }
 
   , server: {
