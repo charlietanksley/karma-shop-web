@@ -81,11 +81,10 @@ module.exports = {
         attributionText: 'Marcin Wichary'
       }
       ]
-      }
-               })
+      }})
     })
 
-    app.get('/api/store.json', function(req, res){
+    app.get('/api/stores.json', function(req, res){
       res.json({store: {
         customer: {
           id: 1
