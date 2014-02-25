@@ -7,6 +7,9 @@
  */
 module.exports = function(lineman) {
   //Override file patterns here
-  // return {
-  // }
+  return {
+    sass: {
+      generatedApp: "generated/css/app.css"
+    }
+  }
 }

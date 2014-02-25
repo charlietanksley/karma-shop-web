@@ -17,7 +17,7 @@ module.exports = function(lineman) {
     browserify: {
       app_js: {
         files: {
-          "generated/js/app.js" : "app/js/app.js"
+          "generated/js/app.js" : "<%= files.js.app %>"
         }
       }
 
@@ -47,7 +47,7 @@ module.exports = function(lineman) {
   }
 
   , removeTasks: {
-    common: ["less", "handlebars", "coffee", "jst"]
+    common: ["less", "handlebars", "coffee", "jst", "concat_sourcemap"]
   }
 
   , server: {
