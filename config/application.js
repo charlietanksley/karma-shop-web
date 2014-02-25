@@ -47,7 +47,7 @@ module.exports = function(lineman) {
   }
 
   , removeTasks: {
-    common: ["less", "handlebars", "coffee", "jst", "concat_sourcemap"]
+    common: ["less", "handlebars", "coffee", "jst"]
   }
 
   , server: {
