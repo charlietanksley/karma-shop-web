@@ -5,7 +5,7 @@ module.exports = Backbone.View.extend({
   el: '.content'
 
 , initialize: function() {
-    fn.bind(this, this.submit, this.destroy)
+    fn.bind(this, this.submit)
   }
 
 , submit: function(context, state) {
