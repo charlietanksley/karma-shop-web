@@ -5,6 +5,13 @@ module.exports = {
     new IntroText().render({text: text})
   }
 
+, productsNew: function() {
+    var Product = require('./models/product')
+      , NewProductView = require('./views/new-product-view')
+
+    new NewProductView({model: new Product()}).render()
+  }
+
 , sidebar: function() {
     var PotentialCustomerListing = require('./views/potential-customer-listing-view')
       , PotentialCustomers = require('./models/potential-customers')
