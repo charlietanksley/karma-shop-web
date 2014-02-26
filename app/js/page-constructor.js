@@ -5,6 +5,13 @@ module.exports = {
     new IntroText().render({text: text})
   }
 
+, productsNew: function() {
+    var Product = require('./models/product')
+      , NewProductView = require('./views/new-product-view')
+
+    new NewProductView({model: new Product()}).render()
+  }
+
 , sidebar: function() {
     var PotentialCustomerListing = require('./views/potential-customer-listing-view')
       , PotentialCustomers = require('./models/potential-customers')
@@ -14,21 +21,21 @@ module.exports = {
     new PotentialCustomerListing({collection: potentialCustomers})
   }
 
-  , shop: function(term) {
-      var Products = require('./models/products')
-        , ProductsView = require('./views/products-view')
-        , products = new Products({customerName: term})
+, shop: function(term) {
+    var Products = require('./models/products')
+      , ProductsView = require('./views/products-view')
+      , products = new Products({customerName: term})
 
-      products.fetch()
-      new ProductsView({collection: products})
-    }
+    products.fetch()
+    new ProductsView({collection: products})
+  }
 
-  , treasuresFor: function(term) {
-      var Treasures = require('./models/treasures')
-        , treasures = new Treasures({customerName: term})
-        , TreasureView = require('./views/treasure-view')
+, treasuresFor: function(term) {
+    var Treasures = require('./models/treasures')
+      , treasures = new Treasures({customerName: term})
+      , TreasureView = require('./views/treasure-view')
 
-      treasures.fetch()
-      new TreasureView({collection: treasures})
-    }
+    treasures.fetch()
+    new TreasureView({collection: treasures})
+  }
 }
