@@ -25,7 +25,7 @@ module.exports = Backbone.View.extend({
 , template: '<div class="product-listing"></div>'
 
 , render: function() {
-    var ProductView = require('../../templates/products.jsx')
+    var StoreView = require('../../templates/store.jsx')
       , React = require('react')
       , data = { customer: this.customer,
                  products: this.collection,
@@ -34,7 +34,7 @@ module.exports = Backbone.View.extend({
     this.el.innerHTML = this.template
     var component = document.getElementsByClassName('product-listing')[0]
 
-    React.renderComponent(new ProductView(data), component)
+    React.renderComponent(new StoreView(data), component)
     return this
   }
 })
