@@ -23,10 +23,23 @@ module.exports = React.createClass({
     this.props.submit(this.state)
   }
 
+  , processImage: function(event) {
+    var ctx = document.getElementById('canvas').getContext('2d')
+    , img = new Image
+    img.src = URL.createObjectURL(event.target.files[0])
+    img.onload = function() {
+      ctx.drawImage(img, 20,20)
+    }
+
+    var canvas = document.getElementById('canvas')
+    var data = canvas.toDataURL()
+    this.setState({src: data})
+  }
+
   , render: function() {
     return(
       <section className="product">
-      <form action>
+      <form>
         <div className="attribution-inputs">
           <label>Attribution label</label>
           <input type="text" name="attributionText" placeholder="attribution text" value={ this.state.attributionText } onChange={ this.handleChange } />
@@ -39,7 +52,8 @@ module.exports = React.createClass({
           <label>Price</label>
           <input type="text" name="price" placeholder="price" value={ this.state.price } onChange={ this.handleChange } />
         </div>
-        <input type="text" name="src" value={ this.state.src } onChange={ this.handleChange } />
+        <input type="file" name="img" id="img" onChange={ this.processImage } />
+        <canvas width="400" height="300" id="canvas"/>
         <div className="actions">
           <button type="submit" className="submit" onClick={ this.handleSubmit } >Submit it!</button>
         </div>
