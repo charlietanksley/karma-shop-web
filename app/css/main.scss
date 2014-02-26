@@ -10,3 +10,30 @@
 body {
   padding: 0 1% 1% 1%;
 }
+
+.product {
+  label {
+    @extend .column;
+    @extend .twelve;
+    @extend .push-left;
+  }
+
+  input {
+    @extend .column;
+    @extend .twelve;
+    @extend .push;
+  }
+
+  .actions {
+    @extend .column;
+    @extend .twelve;
+    @extend .push-left;
+  }
+
+  button {
+    @extend .column;
+    @extend .four;
+    padding: 0.5em;
+    font-size: 1.2em;
+  }
+}
