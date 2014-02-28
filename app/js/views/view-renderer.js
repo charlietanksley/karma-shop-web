@@ -7,7 +7,12 @@ function ViewRenderer(args) {
   this.element = args.element || 'div'
 }
 
+ViewRenderer.prototype.clearMainArea = function() {
+  this.view.el.innerHTML = ''
+}
+
 ViewRenderer.prototype.render = function() {
+  this.clearMainArea()
   var template = this.template()
   this.renderWithReact(template)
 }

@@ -15,7 +15,6 @@ module.exports = Backbone.View.extend({
       , router = new Router()
 
     product.save()
-    context.remove()
     router.navigate("/", {trigger: true})
   }
 
