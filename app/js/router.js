@@ -19,17 +19,14 @@ module.exports = Backbone.Router.extend({
   }
 
 , productsNew: function() {
-    pageConstructor.sidebar()
     pageConstructor.productsNew()
   }
 
 , shop: function(identifier) {
-    pageConstructor.sidebar()
     pageConstructor.shop(identifier)
   }
 
 , treasures: function(identifier) {
-    pageConstructor.sidebar()
     pageConstructor.treasuresFor(identifier)
   }
 })
