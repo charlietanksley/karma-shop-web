@@ -19,7 +19,8 @@
     "reactify": "~0.7.0",
     "browserify": "~3.28.0",
     "grunt-browserify": "https://github.com/charlietanksley/grunt-browserify/tarball/master",
-    "debowerify": "~0.5.2"
+    "debowerify": "~0.5.2",
+    "when": "~2.8.0"
   },
   "scripts": {
     "start": "lineman run",

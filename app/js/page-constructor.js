@@ -5,6 +5,15 @@ module.exports = {
     new IntroText().render({text: text})
   }
 
+, productsIndex: function() {
+    var Products = require('./models/products')
+      , ProductsView = require('./views/products-view')
+      , products = new Products()
+
+    products.fetch()
+    new ProductsView({collection: products})
+  }
+
 , productsNew: function() {
     var Product = require('./models/product')
       , NewProductView = require('./views/new-product-view')
@@ -22,12 +31,12 @@ module.exports = {
   }
 
 , shop: function(term) {
-    var Products = require('./models/products')
-      , ProductsView = require('./views/products-view')
-      , products = new Products({customerName: term})
+    var Store = require('./models/store')
+      , StoreView = require('./views/store-view')
+      , store = new Store({customerName: term})
 
-    products.fetch()
-    new ProductsView({collection: products})
+    store.fetch()
+    new StoreView({collection: store})
   }
 
 , treasuresFor: function(term) {
