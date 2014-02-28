@@ -1,0 +1,41 @@
+.new-product {
+  @extend .column;
+  @extend .twelve;
+}
+
+.new-product-actions {
+  @extend .column;
+  @extend .twelve;
+}
+
+.new-product-attribution {
+  @extend .column;
+  @extend .twelve;
+}
+
+.new-product-data {
+  @extend .column;
+  @extend .six;
+  @extend .last;
+
+  input {
+  @extend .column;
+  @extend .twelve;
+  margin-bottom: 0.353em;
+  }
+}
+
+.new-product-details {
+  @extend .column;
+  @extend .twelve;
+}
+
+.new-product-image-upload {
+  @extend .column;
+  @extend .six;
+}
+
+.new-product-submit {
+  background: $action;
+  color: $action-button-font-color;
+}
