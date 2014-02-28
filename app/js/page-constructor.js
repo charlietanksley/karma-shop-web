@@ -1,8 +1,8 @@
 module.exports = {
-  introText: function(text) {
-    var IntroText = require('./views/intro-text-view')
+  landingPage: function(text) {
+    var LandingPage = require('./views/landing-page-view')
 
-    new IntroText().render({text: text})
+    new LandingPage().render()
   }
 
 , productsIndex: function() {

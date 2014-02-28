@@ -11,9 +11,8 @@ module.exports = Backbone.Router.extend({
   }
 
 , index: function(){
-    var text = "You have all that karma sitting in the (chatroom) bank.  Are you really enjoying it?  Are you really living? Don't wait until retirement to enjoy your karma.  Treat yourself to something nice today.  You've earned it."
-    pageConstructor.introText(text)
-    pageConstructor.sidebar() }
+    pageConstructor.landingPage()
+  }
 
 , products: function() {
    pageConstructor.productsIndex()
