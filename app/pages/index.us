@@ -12,16 +12,10 @@
       <h1 class="page-title centered">Ye Olde Karma Shoppe</h1>
     </header>
 
-    <section class="main">
-      <section class="about">
-      </section>
-
+    <main class="main">
       <section class="content">
       </section>
-    </section>
-
-    <div class="sidebar"></div>
-
+    </main>
     <script type="text/javascript" src="/<%= js %>"></script>
   </body>
 </html>
