@@ -1,9 +1,14 @@
 $display-family: 'Cabin Sketch', sans-serif;
-$body-family: 'Cabin', serif;
+$body-family: 'Cabin', sans-serif;
 
-$green: green;
-$action: blue;
-$action-button-font-color: white;
+$light: #ffffff;
+$dark: #1a1a1a;
 
-$nav-button: blue;
-$nav-button-font-color: white;
+$dark-highlight: #111111;
+
+$money: #45ada8;
+$action: #9de0ad;
+$action-button-font-color: $dark;
+
+$nav-button: #e5fcc2;
+$nav-button-font-color: $dark;
