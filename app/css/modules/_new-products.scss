@@ -36,6 +36,8 @@
 }
 
 .new-product-submit {
-  background: $action;
-  color: $action-button-font-color;
+  @extend .btn;
+  @extend .btn-action;
+  font-size: 1em;
+  border: none;
 }
