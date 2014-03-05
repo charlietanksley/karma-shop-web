@@ -29,7 +29,7 @@ module.exports = React.createClass({
     return(
       <section>
         <h2>Available products</h2>
-        <p className="buffer-bottom">
+        <p className="buffer-bottom secondary-nav">
           <a className="btn btn-action" href="/products/new">Add new product</a>
         </p>
         <ul className="plain">
