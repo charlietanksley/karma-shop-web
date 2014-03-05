@@ -11,16 +11,29 @@ module.exports = React.createClass({
 , render: function() {
     var checkout = require('../js/lib/checkout')
 
+    var totalNumberOfItems = this.props.products.length
+
+    var classForListItem = function(index) {
+      var i = index + 1
+      if (i % 2 === 0) {
+        return 'store-item-right'
+      } else if (i === totalNumberOfItems) {
+        return 'store-item-last'
+      } else {
+        return 'store-item-left'
+      }
+    }
+
     var listNodes = this.props.products.map(function (product, index) {
       return (
-        <li className="product">
-          <div className="product-visual">
-            <img className="product-picture" src={ product.get('src') } alt={ product.get('name') } />
+        <li className={ classForListItem(index) }>
+          <div className="store-item-visual">
+            <img className="store-item-picture" src={ product.get('src') } alt={ product.get('name') } />
           </div>
-          <div className="product-details">
+          <div className="store-item-details">
             <dl>
               <dt>Price (in karma points)</dt>
-              <dd><span className="product-price">{ product.get('price') }</span></dd>
+              <dd><span className="store-item-price">{ product.get('price') }</span></dd>
               <dt>Name</dt>
               <dd>{ product.get('name') }</dd>
               <dt>Quantity owned</dt>
