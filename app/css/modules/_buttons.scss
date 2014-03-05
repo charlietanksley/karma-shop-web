@@ -3,8 +3,7 @@
   color: $text-color;
   text-decoration: none;
   &:hover {
-    background: lighten( $color, 10% );
-    color: darken( $text-color, 10% );
+    background: darken( $color, 10% );
   }
 }
 
