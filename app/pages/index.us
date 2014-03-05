@@ -16,8 +16,8 @@
     <main class="main">
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li class="main-nav-item"><a class="btn btn-nav" href='/products'>All Products</a></li>
-          <li class="main-nav-item"><a class="btn btn-nav" href='/products/new'>New Product</a></li>
+          <li class="main-nav-item"><a class="btn btn-nav" href='/products'>All products</a></li>
+          <li class="main-nav-item"><a class="btn btn-nav" href='/products/new'>New product</a></li>
           <input type='text' class="main-nav-search" placeholder="look up a customer">
         </ul>
       </nav>
