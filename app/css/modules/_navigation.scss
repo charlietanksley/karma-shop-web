@@ -1,0 +1,11 @@
+.main-nav-list {
+  @extend .column;
+  @extend .twelve;
+  @extend .inline;
+  @extend .plain;
+  @extend .right;
+}
+
+.main-nav-search {
+  padding: 0.88em;
+}
