@@ -12,6 +12,10 @@
   padding: 1em;
 }
 
+.btn-nav {
+  @include button($nav-button, $nav-button-font-color);
+}
+
 .btn-action {
   @include button($action, $action-button-font-color);
 }
