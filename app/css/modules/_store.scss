@@ -1,7 +1,8 @@
 .buy-now {
-  background: $action;
-  color: $action-button-font-color;
-  padding: 1em;
+  @extend .btn;
+  @extend .btn-action;
+  font-size: 1em;
+  border: none;
 }
 
 .karma-available {
