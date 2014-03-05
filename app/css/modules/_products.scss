@@ -1,0 +1,9 @@
+.products-item {
+  display: inline-block;
+  @extend .column;
+  @extend .three;
+}
+
+.products-price {
+  color: $money;
+}

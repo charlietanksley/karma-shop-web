@@ -1,7 +1,8 @@
 .buy-now {
-  background: $action;
-  color: $action-button-font-color;
-  padding: 1em;
+  @extend .btn;
+  @extend .btn-action;
+  font-size: 1em;
+  border: none;
 }
 
 .karma-available {
@@ -9,29 +10,38 @@
   text-align: right;
 }
 
-.product {
+.store-item-price,
+.karma-number {
+  color: $money;
+}
+
+%store-item {
   @extend .column;
-  @extend .twelve;
+  @extend .six;
   margin-bottom: 1em;
 }
 
-.product-details {
-  @extend .last;
+.store-item-last {
+  @extend %store-item;
 }
 
-.product-picture {
-  display: block;
-  right: 0;
-  width: 100%;
+.store-item-left {
+  @extend %store-item;
+  border-right: 1px solid $light-border;
 }
 
-.product-price,
-.karma-number {
-  color: $green;
+.store-item-right {
+  @extend %store-item;
+  @extend .last
 }
 
-.product-details,
-.product-visual {
+.store-item-visual {
   @extend .column;
   @extend .six;
+}
+
+.store-item-details {
+  @extend .column;
+  @extend .six;
+  @extend .last;
 }

@@ -4,24 +4,27 @@
     <title><%= pkg.title %></title>
 
     <link rel="stylesheet" type="text/css" href="/<%= css %>" media="all" />
-    <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic,600' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Alegreya:900' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header class="header">
       <h1 class="page-title centered">Ye Olde Karma Shoppe</h1>
     </header>
 
-    <section class="main">
-      <section class="about">
-      </section>
+    <main class="main">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav-item"><a class="btn btn-nav" href='/products'>All products</a></li>
+          <li class="main-nav-item"><a class="btn btn-nav" href='/products/new'>New product</a></li>
+          <input type='text' class="main-nav-search" placeholder="look up a customer">
+        </ul>
+      </nav>
 
       <section class="content">
       </section>
-    </section>
-
-    <div class="sidebar"></div>
-
+    </main>
     <script type="text/javascript" src="/<%= js %>"></script>
   </body>
 </html>

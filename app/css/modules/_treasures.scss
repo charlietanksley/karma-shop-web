@@ -1,6 +1,7 @@
 .treasure {
   @extend .column;
   @extend .three;
+  margin-bottom: 1em;
 }
 
 .treasure-image {

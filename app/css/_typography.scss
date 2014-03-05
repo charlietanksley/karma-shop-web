@@ -1,10 +1,13 @@
 body {
   font-size: 20px;
   font-family: $body-family;
+  color: $dark;
 }
 
 h1,h2,h3,h4 {
   font-family: $display-family;
+  color: $dark-highlight;
+  font-weight: 900;
 }
 
 h1 {

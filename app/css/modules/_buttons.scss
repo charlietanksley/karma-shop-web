@@ -1,0 +1,20 @@
+@mixin button($color, $text-color) {
+  background: $color;
+  color: $text-color;
+  text-decoration: none;
+  &:hover {
+    background: darken( $color, 10% );
+  }
+}
+
+.btn {
+  padding: 1em;
+}
+
+.btn-nav {
+  @include button($nav-button, $nav-button-font-color);
+}
+
+.btn-action {
+  @include button($action, $action-button-font-color);
+}

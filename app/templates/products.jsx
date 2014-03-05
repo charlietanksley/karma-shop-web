@@ -4,15 +4,20 @@ var React = require('react')
 module.exports = React.createClass({
   render: function() {
     var listNodes = this.props.products.map(function (product, index) {
+      var classForItem = function() {
+        var i = index + 1
+        return i % 4 == 0 ? "products-item last" : "products-item"
+      }
+
       return (
-        <li className="product-list">
-          <div className="product-list-visual">
-            <img className="product-picture" src={ product.get('src') } alt={ product.get('name') } />
+        <li className={ classForItem() }>
+          <div className="products-picture-container">
+            <img className="products-picture" src={ product.get('src') } alt={ product.get('name') } />
           </div>
-          <div className="product-list-details">
+          <div className="products-item-details">
             <dl>
               <dt>Price (in karma points)</dt>
-              <dd><span className="product-price">{ product.get('price') }</span></dd>
+              <dd><span className="products-price">{ product.get('price') }</span></dd>
               <dt>Name</dt>
               <dd>{ product.get('name') }</dd>
             </dl>
@@ -22,9 +27,15 @@ module.exports = React.createClass({
     }, this)
 
     return(
-      <ul className="plain">
-      { listNodes }
-      </ul>
+      <section>
+        <h2>Available products</h2>
+        <p className="buffer-bottom secondary-nav">
+          <a className="btn btn-action" href="/products/new">Add new product</a>
+        </p>
+        <ul className="plain">
+          { listNodes }
+        </ul>
+      </section>
     )
   }
 })
