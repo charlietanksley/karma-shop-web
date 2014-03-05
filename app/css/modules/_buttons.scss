@@ -1,0 +1,17 @@
+@mixin button($color, $text-color) {
+  background: $color;
+  color: $text-color;
+  text-decoration: none;
+  &:hover {
+    background: lighten( $color, 10% );
+    color: darken( $text-color, 10% );
+  }
+}
+
+.btn {
+  padding: 1em;
+}
+
+.btn-action {
+  @include button($action, $action-button-font-color);
+}
