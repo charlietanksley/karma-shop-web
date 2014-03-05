@@ -21,12 +21,20 @@ module.exports = React.createClass({
       )
     })
 
+    var shoppingLink = function(name) {
+      return '/treasures/' + name + '/shop'
+    }
+
     return(
       <section className="treasures">
-      <h2 className="treasure-owner">{ this.props.customer.get('name') }</h2>
-      <ul className="plain">
-      { listNodes }
-      </ul>
+        <h2 className="treasure-owner">{ this.props.customer.get('name') }</h2>
+        <p className="buffer-bottom secondary-nav">
+          <a className="btn btn-action" href={ shoppingLink(this.props.customer.get('name')) }>Go shopping</a>
+        </p>
+
+        <ul className="plain">
+        { listNodes }
+        </ul>
       </section>
     )
   }
