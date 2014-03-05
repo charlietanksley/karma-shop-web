@@ -45,9 +45,16 @@ module.exports = React.createClass({
       )
     }, this)
 
+    var backLink = function(name) {
+      return '/treasures/' + name
+    }
+
     return(
       <section className="store">
       <h2 className="store-welcome">Get busy shopping</h2>
+      <p className="buffer-bottom secondary-nav">
+        <a className="btn btn-action" href={ backLink(this.props.customer.get('name')) }>View treasure shelf</a>
+      </p>
 
       <p className="karma-available">
       { this.props.customer.get('name') } has <span className="karma-number">{ this.props.customer.get('availableKarma') }</span> karma available
