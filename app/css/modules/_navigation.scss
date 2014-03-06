@@ -1,3 +1,8 @@
+.close {
+  color: $green-dark;
+  font-size: 0.618em;
+}
+
 .main-nav-list {
   @extend .column;
   @extend .twelve;

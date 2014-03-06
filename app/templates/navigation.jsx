@@ -31,11 +31,17 @@ module.exports = React.createClass({
       , searchTerm: searchTerm })
   }
 
+  , resetState: function() {
+    this.setState({ filteredCustomers: this.props.potentialCustomers
+      , searchTerm: '' })
+  }
+
   , startSearch: function() {
     this.toggleSearchResultVisibility()
   }
 
-  , stopSearch: function() {
+  , stopSearch: function(e) {
+    this.resetState()
     this.toggleSearchResultVisibility()
   }
 
@@ -57,9 +63,9 @@ module.exports = React.createClass({
       <ul className="main-nav-list">
         <li className="main-nav-item"><a className="btn btn-nav" href='/products'>All products</a></li>
         <li className="main-nav-item"><a className="btn btn-nav" href='/products/new'>New product</a></li>
-        <input type='text' className="main-nav-search" placeholder="look up a customer" onChange={ this.handleChange } onFocus={ this.startSearch } onBlur={ this.stopSearch }/>
+        <input type='text' className="main-nav-search" placeholder="look up a customer" onChange={ this.handleChange } onFocus={ this.startSearch } value={ this.state.searchTerm }/>
         <div className="search-results hidden">
-          <SearchListing collection={ this.state.filteredCustomers }></SearchListing>
+          <SearchListing collection={ this.state.filteredCustomers } closeSearch={ this.stopSearch }></SearchListing>
         </div>
       </ul>
     )
