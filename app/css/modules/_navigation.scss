@@ -13,3 +13,12 @@
 .secondary-nav {
   text-align: right;
 }
+
+.search-results {
+  background: $light;
+  border: 1px solid $light-border;
+  border-top: none;
+  padding: 1%;
+  position: fixed;
+  right: 1%;
+}
