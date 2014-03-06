@@ -21,15 +21,6 @@ module.exports = {
     new NewProductView({model: new Product()}).render()
   }
 
-, sidebar: function() {
-    var PotentialCustomerListing = require('./views/potential-customer-listing-view')
-      , PotentialCustomers = require('./models/potential-customers')
-      , potentialCustomers = new PotentialCustomers()
-
-    potentialCustomers.fetch()
-    new PotentialCustomerListing({collection: potentialCustomers})
-  }
-
 , shop: function(term) {
     var Store = require('./models/store')
       , StoreView = require('./views/store-view')
