@@ -1,16 +1,19 @@
 $display-family: 'Alegreya', serif;
 $body-family: 'Roboto', sans-serif;
 
-$light: #ffffff;
-$dark: #1a1a1a;
+$green-dark: #45ada8;
+$green-mint: #9de0ad;
+$green-pale: #e5fcc2;
+$white: #ffffff;
+$black: #1a1a1a;
+$black-darker: #111111;
 
-$dark-highlight: #111111;
-
-$money: #45ada8;
-$action: #9de0ad;
-$action-button-font-color: $dark;
-
-$nav-button: #e5fcc2;
+$action: $green-mint;
+$action-button-font-color: $black;
+$dark: $black;
+$dark-highlight: $black-darker;
+$light: $white;
+$light-border: $green-mint;
+$money: $green-dark;
+$nav-button: $green-pale;
 $nav-button-font-color: $dark;
-
-$light-border: #9de0ad;
