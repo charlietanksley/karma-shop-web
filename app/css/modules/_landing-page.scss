@@ -1,0 +1,23 @@
+.landing-page-welcome {
+  @extend .column;
+  @extend .center;
+  @extend .eight;
+
+  font-size: 1.496em;
+}
+
+.landing-page-how-it-works {
+  @extend .column;
+  @extend .twelve;
+}
+
+.landing-page-shopping-guide {
+  @extend .column;
+  @extend .six;
+}
+
+.landing-page-product-guide {
+  @extend .column;
+  @extend .six;
+  @extend .last;
+}
