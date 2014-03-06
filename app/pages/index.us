@@ -10,7 +10,7 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="page-title centered">Ye Olde Karma Shoppe</h1>
+      <h1 class="page-title centered"><a href='/' class='plain-link'>Ye Olde Karma Shoppe</a></h1>
     </header>
 
     <main class="main">
