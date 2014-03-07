@@ -15,7 +15,7 @@ module.exports = React.createClass({
     , data = {}
 
     data[name] = event.target.value
-    this.setState(data)
+    this.setState(data, this.validate)
   }
 
   , handleSubmit: function(event) {
@@ -32,13 +32,41 @@ module.exports = React.createClass({
     , url = URL.createObjectURL(event.target.files[0])
 
     var setSrcState = fn.bind(this, function() {
-      this.setState({src: uploader.imageUrl()})
+      this.setState({src: uploader.imageUrl()}, this.validate)
     })
 
     uploader = new ImageUploader(canvas, event)
     uploader.upload(url)
     .then(fn.bind(uploader, uploader.draw))
     .then(setSrcState)
+  }
+
+  , validate: function() {
+    var btn = document.getElementsByClassName('new-product-submit')[0]
+    , currentAttributes = btn.attributes
+    , disabled
+
+    if (this.isValid() === true) {
+      btn.removeAttribute('disabled')
+    } else {
+      if (btn.getAttribute('disabled') === null) {
+        disabled = document.createAttribute('disabled')
+        disabled.nodeValue = 'disabled'
+        btn.setAttributeNode(disabled)
+      }
+    }
+  }
+
+  , isValid: function() {
+    var src = this.state.src
+    , name = this.state.name
+    , price = this.state.price
+
+    if (src != '' && name != '' && price != 0 && price != '') {
+      return true
+    } else {
+      return false
+    }
   }
 
   , render: function() {
@@ -55,18 +83,18 @@ module.exports = React.createClass({
           <fieldset className="new-product-data">
             <legend>Product data</legend>
 
-            <fieldset className="new-product-attribution">
-              <input type="text" name="attributionText" placeholder="attribution text for image" value={ this.state.attributionText } onChange={ this.handleChange } />
-              <input type="text" name="attributionUrl" placeholder="attribution url for image" value={ this.state.attributionUrl } onChange={ this.handleChange } />
-            </fieldset>
-
             <fieldset className="new-product-details">
               <input type="text" name="name" placeholder="name of product" value={ this.state.name } onChange={ this.handleChange } />
               <input type="text" name="price" placeholder="price of product (whole numbers only)" value={ this.state.price } onChange={ this.handleChange } />
             </fieldset>
 
+            <fieldset className="new-product-attribution">
+              <input type="text" name="attributionText" placeholder="attribution text for image" value={ this.state.attributionText } onChange={ this.handleChange } />
+              <input type="text" name="attributionUrl" placeholder="attribution url for image" value={ this.state.attributionUrl } onChange={ this.handleChange } />
+            </fieldset>
+
             <fieldset className="new-product-actions">
-              <button type="submit" className="new-product-submit" rel="create-product" onClick={ this.handleSubmit } >Create product</button>
+              <button type="submit" className="new-product-submit" disabled='disabled' rel="create-product" onClick={ this.handleSubmit } >Create product</button>
             </fieldset>
           </fieldset>
         </form>
