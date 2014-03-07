@@ -5,7 +5,11 @@ module.exports = Backbone.View.extend({
   el: '.content'
 
 , initialize: function() {
+    var Products = require('../models/products')
+
     fn.bind(this, this.submit)
+    this.collection = new Products()
+    this.collection.fetch()
   }
 
 , submit: function(context, state) {
@@ -14,8 +18,12 @@ module.exports = Backbone.View.extend({
       , Router = require('../router')
       , router = new Router()
 
-    product.save()
-    router.navigate("/products", {trigger: true})
+    var ProductsView = require('./products-view')
+
+    context.collection.create(product)
+    new ProductsView({collection: context.collection})
+
+    router.navigate("/products")
   }
 
 , template: '<div class="new-product"></div>'
