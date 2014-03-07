@@ -1,0 +1,7 @@
+.footer {
+  @extend .column;
+  @extend .ten;
+  @extend .center;
+
+  text-align: center;
+}

@@ -20,6 +20,14 @@
       <section class="content">
       </section>
     </main>
+
+    <footer class="footer">
+      <p>
+        Built by <a href="https://github.com/charlietanksley">Charlie
+          Tanksley</a>. Codes: <a href="https://github.com/charlietanksley/karma_shop_api">backend/api</a>
+          and <a href="https://github.com/charlietanksley/karma-shop-web">frontend</a>.
+      </p>
+    </footer>
     <script type="text/javascript" src="/<%= js %>"></script>
   </body>
 </html>
