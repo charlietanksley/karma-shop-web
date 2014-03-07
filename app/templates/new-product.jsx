@@ -10,6 +10,10 @@ module.exports = React.createClass({
       , src: '' }
   }
 
+  , componentDidMount: function() {
+    this.validate()
+  }
+
   , handleChange: function(event) {
     var name = event.target.name
     , data = {}
@@ -94,7 +98,7 @@ module.exports = React.createClass({
             </fieldset>
 
             <fieldset className="new-product-actions">
-              <button type="submit" className="new-product-submit" disabled='disabled' rel="create-product" onClick={ this.handleSubmit } >Create product</button>
+              <button type="submit" className="new-product-submit" rel="create-product" onClick={ this.handleSubmit } >Create product</button>
             </fieldset>
           </fieldset>
         </form>
