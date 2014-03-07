@@ -5,6 +5,10 @@
   &:hover {
     background: darken( $color, 10% );
   }
+  &:disabled {
+    background: grayscale($color);
+    color: grayscale($text-color);
+  }
 }
 
 .btn {
