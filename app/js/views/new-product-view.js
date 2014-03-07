@@ -15,7 +15,7 @@ module.exports = Backbone.View.extend({
       , router = new Router()
 
     product.save()
-    router.navigate("/", {trigger: true})
+    router.navigate("/products", {trigger: true})
   }
 
 , template: '<div class="new-product"></div>'
